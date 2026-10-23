@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Sebuah Pesan Kecil 🌸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- Backsound -->
+<audio id="backsound" loop preload="none">
+  <source src="audio/backsound.mp3" type="audio/mp3" />
+  Browser kamu tidak mendukung audio.
+</audio>
+
+<!-- Tombol kontrol musik (muncul setelah unlock) -->
+<button id="musicToggle" class="music-toggle hidden" aria-label="Putar / jeda musik">
+  <span class="music-icon">♪</span>
+</button>
+<body>
+  <!-- Kelopak bunga jatuh -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <!-- ====== HALAMAN KUNCI ====== -->
+  <section class="gate" id="gate">
+    <div class="gate-card">
+      <div class="kikyo-icon">🌸</div>
+      <h1>Sebuah Pesan Rahasia</h1>
+      <p class="sub">Untuk seseorang yang spesial hari ini...</p>
+      <p class="hint">
+        Petunjuk: nama bunga dari sekolah khusus perempuan anime kaoru hana wa rin to saku — 5 huruf.
+      </p>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="passwordInput"
+          placeholder="Masukkan kata sandi"
+          maxlength="20"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="unlockBtn">Buka</button>
+      </div>
+
+      <p class="error" id="errorMsg"></p>
+    </div>
+  </section>
+
+  <!-- ====== KONTEN UTAMA ====== -->
+  <main class="content hidden" id="content">
+    <!-- Hero -->
+    <section class="hero">
+      <p class="eyebrow">24 · Maret · 2027</p>
+      <h1 class="title">
+        Happy Birthday,<br />
+        <span>Zazkia Putri</span>
+      </h1>
+      <p class="subtitle">
+        Seperti bunga Kikyo yang mekar diam-diam,<br />
+        semoga harimu dipenuhi hal-hal kecil<br />
+        yang membuatmu tersenyum.
+      </p>
+      <div class="scroll-hint">↓</div>
+    </section>
+
+    <!-- Galeri -->
+    <section class="gallery-section">
+      <h2 class="section-title">Sepotong Momen</h2>
+      <div class="gallery">
+        <figure>
+          <img src="images/foto1.jpg" alt="Momen 1" />
+          <figcaption>seragam putih abu-abu yang paling sering aku ingat</figcaption>
+        </figure>
+        <figure>
+          <img src="images/foto2.jpg" alt="Momen 2" />
+          <figcaption>seragam pramuka yang bikin orang tertarik</figcaption>
+        </figure>
+        <figure>
+          <img src="images/foto3.jpg" alt="Momen 3" />
+          <figcaption>versi terbaik dari dirimu, seakan semua orang di sekelilingmu ngeblur</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Surat -->
+    <section class="message-section">
+      <div class="letter">
+        <h2 class="section-title">Sebuah Surat Kecil</h2>
+        <p>
+          Seperti bunga kikyo yang tenang, hangat, dan harum bagi siapa pun — kamu juga punya cara sendiri untuk membuat
+          orang di sekitarmu merasa aman.
+        </p>
+        <p>
+          Mungkin hari ini cuma hari biasa bagi orang lain. Tapi bagiku, hari
+          ini adalah hari di mana seseorang yang lembut dan kuat itu lahir ke
+          dunia. Terima kasih sudah ada.
+        </p>
+        <p class="signature">
+          — Dari seseorang yang ingin melihatmu bahagia hari ini
+        </p>
+      </div>
+    </section>
+
+    <!-- Hadiah -->
+    <section class="reward-section">
+      <h2 class="section-title">Hadiahmu Menunggu</h2>
+      <p class="reward-text">
+        Ada sesuatu untukmu. Tunjukkan kode di bawah ini kepada orang yang
+        akan memberikannya.
+      </p>
+      <div class="code-box" id="rewardCode">24032010</div>
+      <p class="reward-note">
+        Kalau kamu sudah menerima hadiah itu, berarti misi kecil ini selesai.
+        Terima kasih sudah mau bermain. 🌸
+      </p>
+    </section>
+
+    <footer>
+      <p>— dibuat diam-diam, dengan sepenuh hati —</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
